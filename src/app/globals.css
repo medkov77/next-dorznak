@@ -6,6 +6,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --hover-color: rgb(239, 127, 26);
+  --link-color: #6ee368;
+  --sidebar-color: rgb(25, 118, 210);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,13 +18,11 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+* {
+}
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+}
+.main {
+  @apply container mx-auto flex;
 }

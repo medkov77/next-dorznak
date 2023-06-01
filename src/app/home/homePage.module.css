@@ -1,0 +1,4 @@
+.title {
+  @apply text-center mt-3 text-[24px] font-[500] lg:text-[35px];
+  color: var(--hover-color);
+}

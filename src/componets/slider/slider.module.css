@@ -1,0 +1,3 @@
+.slide {
+  @apply w-[90%] h-[500px] duration-500 mx-auto rounded-lg;
+}

@@ -1,0 +1,6 @@
+.radio {
+  @apply flex gap-3;
+}
+.wrapper {
+  @apply flex  gap-2;
+}

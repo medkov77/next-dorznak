@@ -1,0 +1,27 @@
+.top {
+  background-color: rgb(240, 240, 240);
+  padding: 20px;
+}
+.contakts {
+  @apply flex md:flex-col gap-3;
+}
+.row {
+  @apply flex items-center justify-between;
+}
+.item {
+  @apply flex gap-2 items-center;
+  transition: all 0.3s;
+  color: rgb(25, 118, 210);
+}
+.item:hover {
+  color: var(--hover-color);
+}
+.download {
+  @apply hidden lg:flex  items-center gap-2;
+}
+.hide {
+  @apply hidden md:block;
+}
+.logo {
+  @apply w-[200px] md:w-[300px];
+}

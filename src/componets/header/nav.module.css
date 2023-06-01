@@ -1,0 +1,41 @@
+.nav {
+  @apply p-4;
+  background-color: rgb(25, 118, 210);
+}
+.wrapper {
+  @apply container mx-auto flex justify-between relative;
+}
+.link {
+  @apply text-white text-lg;
+  transition: all 0.3s;
+}
+.link:hover {
+  color: var(--link-color);
+}
+.link.active {
+  color: var(--link-color);
+}
+.menu {
+  @apply hidden sm:flex gap-8;
+}
+.burger {
+  color: #fff;
+  @apply sm:hidden;
+}
+.mobile {
+  @apply p-4 flex flex-col absolute left-0 translate-y-[-1200px] w-full sm:hidden;
+  background-color: rgb(25, 118, 210);
+  transition: all 0.5s ease-in-out;
+}
+.mobile.active {
+  @apply opacity-100 translate-y-0;
+}
+.enter {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+.login {
+  @apply container mx-auto flex gap-2 justify-end mt-2 text-white;
+  transition: all 0.3s esy-out;
+}
