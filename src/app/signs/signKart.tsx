@@ -5,24 +5,29 @@ import * as images from "../../../public/img/signs/worning";
 import Image from "next/image";
 import RadioField from "@/componets/forms/radioField";
 import { sign } from "crypto";
-import { useState } from "react";
-const SignKart = ({
-  _id,
-  description,
-  name,
-  films,
-  sizes,
-  imgSrc,
-  gost,
-}: Isigns) => {
+import { useEffect, useState } from "react";
+import { IpriceList } from "@/intefacies/IpricelLst";
+const SignKart = (
+  { _id, description, name, films, sizes, imgSrc, gost, form }: Isigns,
+  price: IpriceList
+) => {
   const [params, setParams] = useState({
     size: "2",
     film: "A",
   });
+  console.log(price);
+  const [signpPice, setSignPrice] = useState([]);
   const handleSelect = (name: string, value: string) => {
     setParams({ ...params, [name]: value });
     console.log(value);
   };
+  // useEffect(
+  //   () => {
+  //     setSignPrice(price[form][params.size][params.film]);
+  //     console.log(price);
+  //   },
+  //   { params }
+  // );
   return (
     <div className={styles.signkart}>
       <h2>
@@ -38,7 +43,7 @@ const SignKart = ({
       />
       <div>Тип пленки</div>
       <RadioField
-        items={films}
+        items={["aCom", "aIng", "B", "C"]}
         name="film"
         defaultValue="А"
         onSelect={handleSelect}

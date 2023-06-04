@@ -1,6 +1,5 @@
 [
   {
-    "name": "signs",
     "form": {
       "triangle": {
         "size": {
@@ -34,7 +33,5 @@
         }
       }
     }
-  },
-  { "name": "idn" },
-  { "name": "led" }
+  }
 ]

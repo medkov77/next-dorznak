@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 import Signs from "@/models/Signs";
+import PriceList from "@/models/PriceList";
 import signsMock from "@/models/mock/signs.json";
+import priceMock from "@/models/mock/priceList.json";
+
 let isConnected = false; // track the connection
 
 export const connectToDB = async () => {
@@ -28,8 +31,13 @@ export const connectToDB = async () => {
   if (signs.length !== signsMock.length) {
     await createInitialEntity(Signs, signsMock);
   }
+  const price = await PriceList.find();
+  if (price.length !== priceMock.length) {
+    await createInitialEntity(PriceList, priceMock);
+  }
 };
-async function createInitialEntity(Model, data) {
+
+async function createInitialEntity(Model, data: object[]) {
   // if (Model.collection) {
   //   await Model.collection.drop();
   // }
@@ -37,10 +45,8 @@ async function createInitialEntity(Model, data) {
   return Promise.all(
     data.map(async (item) => {
       try {
-        if (item.id) {
-          delete item.id;
-        }
         const newItem = new Model(item);
+        console.log(newItem);
         await newItem.save();
 
         return newItem;
