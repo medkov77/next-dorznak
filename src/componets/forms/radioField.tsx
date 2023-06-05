@@ -1,5 +1,11 @@
 import styles from "./radioField.module.css";
-const RadioField = ({ items, name, onSelect, defaultValue }) => {
+interface IradioProps {
+  items: { label: string; value: string | number }[];
+  name: string;
+  onSelect: (name: string, value: string) => void;
+  defaultValue: string;
+}
+const RadioField = ({ items, name, onSelect, defaultValue }: IradioProps) => {
   return (
     <form
       className={styles.radio}
@@ -7,15 +13,14 @@ const RadioField = ({ items, name, onSelect, defaultValue }) => {
         onSelect(name, target.value);
       }}
     >
-      {items.map((item: string) => {
-        let check = item.toString() === defaultValue;
-        console.log(item, defaultValue);
+      {items.map((item) => {
+        let check = item.value.toString() === defaultValue;
         return (
-          <div key={item} className={styles.wrapper}>
-            <label>{item}</label>
+          <div key={item.label} className={styles.wrapper}>
+            <label>{item.label}</label>
             <input
               type="radio"
-              value={item}
+              value={item.value}
               name={name}
               defaultChecked={check}
             />

@@ -1,5 +1,16 @@
 .signkart {
-    @apply p-4 mt-5 flex flex-col gap-3 w-full h-fit text-center items-center rounded-sm;
-    box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
-        rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+  @apply p-4 mt-5 flex flex-col gap-3 w-full h-fit text-center items-center rounded-sm;
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+}
+.price {
+  @apply font-bold;
+}
+.row {
+  @apply w-full flex justify-between items-center;
+}
+.btn {
+  @apply p-4 rounded-[30px] font-bold;
+  background-color: var(--hover-color);
+  color: #fff;
 }

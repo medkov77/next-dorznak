@@ -18,13 +18,19 @@ const Signs = () => {
     };
     fetchSigns();
   }, []);
-
+  // console.log("price", price[0].form);
   return (
     <div className="container mx-auto">
       <h1 className={styles.title}>Знаки дорожные ГОСТ 52290-2004</h1>
       <div className={styles.wrapper}>
         {signs?.map((sign) => {
-          return <SignKart key={sign._id} {...sign} price={price} />;
+          return (
+            <SignKart
+              key={sign._id}
+              sign={sign}
+              price={price[0].form[sign.form]}
+            />
+          );
         })}
       </div>
     </div>
