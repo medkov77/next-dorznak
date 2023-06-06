@@ -1,6 +1,6 @@
 .title {
-    @apply text-center mt-5 font-bold text-[25px];
+  @apply text-center mt-5 font-bold text-[25px];
 }
 .wrapper {
-    @apply grid grid-cols-3 auto-cols-max gap-4 px-4;
+  @apply grid grid-cols-1 auto-cols-max gap-4 px-4 justify-center lg:grid-cols-2 xl:grid-cols-3;
 }

@@ -26,29 +26,37 @@ const SignKart = ({ sign, price }) => {
   }, [params.film, params.size, price]);
   return (
     <div className={styles.signkart}>
-      <h2>
-        Знак {sign.gost} ГОСТ52290-2004 <br /> {sign.name}
-      </h2>
-      <Image src={images[sign.imgSrc]} alt={sign.gost} width={150} />
-      <div>Типоразмер</div>
-      <RadioField
-        items={normSize}
-        name="size"
-        defaultValue="2"
-        onSelect={handleSelect}
-      />
-      <div>Тип пленки</div>
-      <RadioField
-        items={[
-          { label: "Аком", value: "aCom" },
-          { label: "Аинж", value: "aIng" },
-          { label: "Б", value: "B" },
-          { label: "В", value: "B" },
-        ]}
-        name="film"
-        defaultValue="aIng"
-        onSelect={handleSelect}
-      />
+      <div className={styles.top}>
+        <h2 className={styles.title}>
+          Знак {sign.gost} ГОСТ52290-2004 <br /> {sign.name}
+        </h2>
+        <Image
+          className={styles.image}
+          src={images[sign.imgSrc]}
+          alt={sign.gost}
+          width={150}
+          max-height={150}
+        />
+        <div>Типоразмер</div>
+        <RadioField
+          items={normSize}
+          name="size"
+          defaultValue="2"
+          onSelect={handleSelect}
+        />
+        <div>Тип пленки</div>
+        <RadioField
+          items={[
+            { label: "Аком", value: "aCom" },
+            { label: "Аинж", value: "aIng" },
+            { label: "Б", value: "B" },
+            { label: "В", value: "B" },
+          ]}
+          name="film"
+          defaultValue="aIng"
+          onSelect={handleSelect}
+        />
+      </div>
       <div className={styles.row}>
         <button className={styles.btn}>В корзину</button>
         <h2 className={styles.price}>Цена {signpPice}</h2>

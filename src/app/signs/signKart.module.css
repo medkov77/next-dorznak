@@ -1,16 +1,28 @@
 .signkart {
-  @apply p-4 mt-5 flex flex-col gap-3 w-full h-fit text-center items-center rounded-sm;
+  @apply p-5 mt-5 mx-auto flex flex-col justify-between  max-w-[370px] min-h-[500px] text-center items-center rounded-sm transition ease-in-out delay-150;
   box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
     rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+}
+.title {
+  @apply max-w-[250px];
+}
+.signkart:hover {
+  transform: translateY(-2%);
+}
+.image {
+  @apply max-h-[150px];
+}
+.top {
+  @apply flex flex-col items-center gap-3;
 }
 .price {
   @apply font-bold;
 }
 .row {
-  @apply w-full flex justify-between items-center;
+  @apply w-full flex flex-col gap-2 2xl:flex-row 2xl:justify-between items-center;
 }
 .btn {
-  @apply p-4 rounded-[30px] font-bold;
+  @apply p-3 rounded-[30px] font-bold transition ease-in-out delay-150 hover:bg-[#f8a861];
   background-color: var(--hover-color);
   color: #fff;
 }
