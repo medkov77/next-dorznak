@@ -1,0 +1,6 @@
+.search {
+  @apply flex w-full mt-4 ml-5;
+}
+.input {
+  @apply w-full outline-[#e5e5ee] p-3 rounded-[20px];
+}

@@ -59,7 +59,9 @@ const SignKart = ({ sign, price }) => {
       </div>
       <div className={styles.row}>
         <button className={styles.btn}>В корзину</button>
-        <h2 className={styles.price}>Цена {signpPice}</h2>
+        <h2 className={styles.price}>
+          Цена <br /> {signpPice} р
+        </h2>
         <button className={styles.btn}>Подробнее</button>
       </div>
     </div>

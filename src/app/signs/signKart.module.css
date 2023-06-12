@@ -19,10 +19,10 @@
   @apply font-bold;
 }
 .row {
-  @apply w-full flex flex-col gap-2 2xl:flex-row 2xl:justify-between items-center;
+  @apply w-full flex flex-col gap-2 2xl:flex-row 2xl:justify-between items-center mt-2;
 }
 .btn {
-  @apply p-3 rounded-[30px] font-bold transition ease-in-out delay-150 hover:bg-[#f8a861];
+  @apply px-3 py-2 w-full 2xl:w-fit rounded-[30px] font-bold transition ease-in-out delay-150 hover:bg-[#f8a861];
   background-color: var(--hover-color);
   color: #fff;
 }

@@ -4,3 +4,6 @@
 .wrapper {
   @apply grid grid-cols-1 auto-cols-max gap-4 px-4 justify-center lg:grid-cols-2 xl:grid-cols-3;
 }
+.search_list {
+  @apply ml-6 mt-2 p-2 shadow-md rounded-md flex flex-col gap-2;
+}

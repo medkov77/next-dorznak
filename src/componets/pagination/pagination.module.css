@@ -1,0 +1,9 @@
+.pagination {
+  @apply flex flex-wrap gap-2 mt-5 justify-center mb-5;
+}
+.btn {
+  @apply p-2 rounded-[50%] bg-[var(--sidebar-color)] text-white w-10 h-10 hover:bg-[#0580fb] transition-all delay-100;
+}
+.active {
+  @apply bg-slate-700 hover:bg-slate-700;
+}
